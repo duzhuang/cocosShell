@@ -9,8 +9,11 @@ echo "输入活动的名字："
 read activityName
 #活动名字
 activityName="${activityName}"
+
+echo "输入活动的路径："
+read activityPath
 #活动路径
-path="${activityName}"
+path="${activityPath}/${activityName}"
 #创建活动文件夹
 if [ ! -d "${path}" ]; then
     mkdir -p "${path}"
